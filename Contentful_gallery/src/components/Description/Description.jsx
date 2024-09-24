@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-export const Description = () => { // Export as named export
+export const Description = () => { 
   const [pageDescription, setPageDescription] = useState(null);
 
   const client = createClient({
     space: 'cj1111y5497q',
-    environment: 'master', // defaults to 'master' if not set
+    environment: 'master',
     accessToken: 'TyhQAC7gfnpeaXbuel6GADvV5UE1F93M4sy91X2hKBY'
   });
 
