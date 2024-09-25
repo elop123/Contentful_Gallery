@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
+import s from './Gallery.module.scss'
 
 export const Gallery = () => {
   const [galleryImages, setGalleryImages] = useState([]);
@@ -35,7 +36,7 @@ export const Gallery = () => {
 
   return (
     <div>
-      <h1>Gallery</h1>
+      <h1 className={s.title1Style}>Gallery</h1>
       <div className="gallery">
         {galleryImages.length > 0 ? (
           galleryImages.map((image, index) => (
@@ -43,10 +44,10 @@ export const Gallery = () => {
               <img
                 src={image.url}
                 alt={image.title}
-                style={{ width: "200px", height: "auto", display: "block", margin: "0 auto" }}
+                style={{ width: "430px", height: "auto", display: "block", margin: "0 auto" }}
               />
-              <h3>{image.title}</h3>
-              <p>{image.description}</p>
+              <h3 className={s.titleStyle}>{image.title}</h3>
+              <p className={s.textStyle}>{image.description}</p>
             </div>
           ))
         ) : (

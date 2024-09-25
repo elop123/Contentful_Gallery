@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Anton&family=Rajdhani:wght@400;600&family=Staatliches&display=swap');
+
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  color: #ffffff;
+  background-color: #e9f3ed5e;
+  border-top: 3px solid #196235;
+}
+
+.footerContent {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 300;
+  color: #78a6bb;
+  letter-spacing: 1.5px;
+}
+
+strong {
+    font-family: 'Lora', serif; 
+    color: #80ebb4; 
+    font-size: 1.3rem;
+    
+  }
+
+.footer a {
+  color: #533608; 
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a:hover {
+  color: #e67e22;
+  transform: scale(1.08); 
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer div p {
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

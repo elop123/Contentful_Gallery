@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import s from './Description.module.scss'
 
 export const Description = () => { 
   const [pageDescription, setPageDescription] = useState(null);
@@ -24,7 +25,7 @@ export const Description = () => {
   }, []);
 
   return (
-    <>
+    <div className={s.description}>
       {pageDescription ? (
         <div>
           {documentToReactComponents(pageDescription)}
@@ -32,6 +33,6 @@ export const Description = () => {
       ) : (
         <p>Loading page description...</p>
       )}
-    </>
+    </div>
   );
 };
